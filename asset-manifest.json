@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/https://galynary.github.io/react-test/static/css/main.1083b3b2.css",
+    "main.js": "/https://galynary.github.io/react-test/static/js/main.8350fec2.js",
+    "static/js/277.97984bcd.chunk.js": "/https://galynary.github.io/react-test/static/js/277.97984bcd.chunk.js",
+    "static/js/730.a4377aad.chunk.js": "/https://galynary.github.io/react-test/static/js/730.a4377aad.chunk.js",
+    "static/js/115.987b247e.chunk.js": "/https://galynary.github.io/react-test/static/js/115.987b247e.chunk.js",
+    "static/js/99.6d4633c2.chunk.js": "/https://galynary.github.io/react-test/static/js/99.6d4633c2.chunk.js",
+    "static/js/273.41f906f2.chunk.js": "/https://galynary.github.io/react-test/static/js/273.41f906f2.chunk.js",
+    "static/js/352.2d0276fd.chunk.js": "/https://galynary.github.io/react-test/static/js/352.2d0276fd.chunk.js",
+    "static/media/phonebook.png": "/https://galynary.github.io/react-test/static/media/phonebook.7e46efe4ad68ad9b6e33.png",
+    "index.html": "/https://galynary.github.io/react-test/index.html",
+    "main.1083b3b2.css.map": "/https://galynary.github.io/react-test/static/css/main.1083b3b2.css.map",
+    "main.8350fec2.js.map": "/https://galynary.github.io/react-test/static/js/main.8350fec2.js.map",
+    "277.97984bcd.chunk.js.map": "/https://galynary.github.io/react-test/static/js/277.97984bcd.chunk.js.map",
+    "730.a4377aad.chunk.js.map": "/https://galynary.github.io/react-test/static/js/730.a4377aad.chunk.js.map",
+    "115.987b247e.chunk.js.map": "/https://galynary.github.io/react-test/static/js/115.987b247e.chunk.js.map",
+    "99.6d4633c2.chunk.js.map": "/https://galynary.github.io/react-test/static/js/99.6d4633c2.chunk.js.map",
+    "273.41f906f2.chunk.js.map": "/https://galynary.github.io/react-test/static/js/273.41f906f2.chunk.js.map",
+    "352.2d0276fd.chunk.js.map": "/https://galynary.github.io/react-test/static/js/352.2d0276fd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1083b3b2.css",
+    "static/js/main.8350fec2.js"
+  ]
+}
