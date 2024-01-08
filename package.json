@@ -1,9 +1,10 @@
 {
-  "name": "react-test",
+  "name": "react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://galynary.github.io/https://galynary.github.io/react-test/",
+  "homepage": "https://galynary.github.io/react-test/",
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
     "@mui/icons-material": "^5.11.16",
@@ -18,7 +19,7 @@
     "react-dom": "^18.2.0",
     "react-loader-spinner": "^5.3.4",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.11.1",
+    "react-router-dom": "^6.21.1",
     "react-scripts": "^5.0.1",
     "react-theme": "^0.1.4",
     "react-toastify": "^9.1.2",
