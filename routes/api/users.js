@@ -1,18 +1,35 @@
-const express = require('express');
-const ctrl = require('../../controllers/users');
-const {validateBody} = require('../../middlewares'); 
-const schemas = require('../../schemas/users')
+/* eslint-disable no-undef */
+const express = require("express");
+
+const { schemas } = require("../../models/user");
+
+const ctrl = require("../../controllers/users");
+
+const { validateBody, authenticate, upload } = require("../../middlewares");
 
 const router = express.Router();
 
-router.get('/', ctrl.listUsers); 
+router.get("/verify/:verificationToken", ctrl.verifyEmail);
 
-router.get('/:userId', ctrl.getUserById); 
+router.post(
+	"/verify",
+	validateBody(schemas.emailSchema),
+	ctrl.resendVerifyEmail
+);
 
-router.post('/', validateBody(schemas.addSchema), ctrl.addUser); 
+router.post("/register", validateBody(schemas.registerSchema), ctrl.register);
 
-router.put('/:userId', validateBody(schemas.updateSchema),ctrl.updateUser);
+router.post("/login", validateBody(schemas.loginSchema), ctrl.login);
 
-    router.delete('/:userId', ctrl.deleteUser);  
+router.get("/current", authenticate, ctrl.getcurrent);
 
-module.exports = router; 
+router.post("/logout", authenticate, ctrl.logout);
+
+router.patch(
+	"/avatars",
+	authenticate,
+	upload.single("avatar"),
+	ctrl.updateAvatar
+);
+
+module.exports = router;
