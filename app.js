@@ -1,4 +1,5 @@
 const express = require("express");
+const bodyParser = require('body-parser');
 const logger = require("morgan");
 const cors = require("cors");
 require("dotenv").config();
@@ -13,7 +14,8 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 app.use(express.static("public"));
-
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 
 app.use((req, res, next) => {
