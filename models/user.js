@@ -4,29 +4,31 @@ const Joi = require("joi");
 
 const { handleMongooseError } = require("../helpers");
 
-const emailRegexp = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+const phoneRegexp = /^(\+38)?0\d{9}$/;
 
 const userSchema = new Schema(
 	{
-		avatarURL: {
+		name: {
 			type: String,
 			required: true,
 		},
-		password: {
+		address: {
 			type: String,
-			required: [true, "Set password for user"],
+			enum: [ "Легоцького 1","Легоцького 3" ,"Легоцького 5","Лінтура 1","Лінтура 7", "Легоцького 5"," Минайська 22"],
+			required: true,
 		},
-		email: {
-			type: String,
-			required: [true, "Email is required"],
+		
+		phone: {
+			type:String,
+			required: true,
 			unique: true,
-			match: emailRegexp,
-		},
-		subscription: {
-			type: String,
-			enum: ["starter", "pro", "business"],
-			default: "starter",
-		},
+			match: phoneRegexp,
+			},
+			tariffs: {
+				type: String,
+				enum: ["Базовий", "Сімейний", "Бізнес"],
+				required: true
+				},
 		verify: {
 			type: Boolean,
 			default: false,
@@ -44,22 +46,16 @@ const userSchema = new Schema(
 userSchema.post("save", handleMongooseError);
 
 const registerSchema = Joi.object({
-	email: Joi.string().pattern(emailRegexp).required(),
-	password: Joi.string().min(6).required(),
-	subscription: Joi.string(),
+	name: Joi.string(),
+	address: Joi.string(),
+	phone: Joi.number().pattern(phoneRegexp).required(),
+	tariffs: Joi.string(),
 });
 
-const emailSchema = Joi.object({
-	email: Joi.string().pattern(emailRegexp).required(),
-});
 
-const loginSchema = Joi.object({
-	email: Joi.string().pattern(emailRegexp).required(),
-	password: Joi.string().min(6).required(),
-});
 
 const User = model("user", userSchema);
 
-const schemas = { registerSchema, loginSchema, emailSchema };
+const schema = { registerSchema };
 
-module.exports = { User, schemas };
+module.exports = { User, schema };

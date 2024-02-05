@@ -2,7 +2,7 @@
 	"name": "node_rest_api",
 	"version": "0.0.0",
 	"private": true,
-	"author": "Alona_Myshko",
+	"author": "Halyna",
 	"engines": {
 		"node": "19.7.0"
 	},
