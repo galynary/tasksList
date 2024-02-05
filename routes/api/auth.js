@@ -9,7 +9,7 @@ const { validateBody, isValidId} = require("../../middlewares");
 
 const router = express.Router();
 router.get("/",  ctrl.listUsers);
-router.post("/register", validateBody(schemas.registerSchema), ctrl.register);
+router.post("/register", validateBody(schemas.registerSchema), ctrl. addUser);
 router.delete("/:id",  isValidId, ctrl.removeUser);
 router.get("/:id", isValidId, ctrl.getUserById);
 router.put(
