@@ -1,9 +1,9 @@
-import { TariffList } from './firstComponent/firstComponent';
-
-export const App = () => {
+import { Card  } from "./firstComponent/firstComponent";
+import "../styles/theme";
+ export const App = () => {
   return (
     <>
-      <TariffList/>
+      <Card></Card>
     </>
   );
 };
