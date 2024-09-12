@@ -1,18 +1,18 @@
 {
-  "name": "parcel-project-template",
+  "name": "планувальник завдань",
   "version": "2.0.0",
   "description": "",
   "homepage": "https://galynary.github.io/tasksList/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-11/"
+    "build": "parcel build src/*.html --public-url /tasksList/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/ https://galynary.github.io/tasksList/.git"
+    "url": "git+https://github.com/galynary/tasksList.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Halyna",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/galynary/tasksList/issues"
